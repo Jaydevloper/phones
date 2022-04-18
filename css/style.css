@@ -424,10 +424,11 @@ img {
     .site-section{
     position: relative;
     z-index: 1;
+    width: 450px;
     min-height: 327px;
     background-image: url(../img/hero-phones-mobile.svg) ,url(../img/bg-mobile.svg);
-    background-size: 400px ,547px;
-    background-position:  calc(50% + 4px) ,  calc(50% + 51px) ;
+    background-size: 400px ,646px;
+    background-position:  calc(50% + 4px) ,  calc(50% + 86px) ;
 
     }
     
