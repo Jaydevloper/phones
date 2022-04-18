@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Thin.woff2') format('woff2'),
+        url('../fonts/PublicSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -17,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Arial", sans-serif;
+  font-family: 'Public Sans',"Arial", sans-serif;
   background-color: #F2F2F2;
 }
 
@@ -71,6 +81,9 @@ img {
 .site-header-wrraper__logo-link-img {
     display: block;
 }
+.header-button{
+    opacity: 0;
+}
 .site-wrraper-list {
     padding: 0;
     display: flex;
@@ -88,6 +101,19 @@ img {
     text-decoration: none;
     color: var(--disc-color);
 }
+/* TODO */
+/* .site-wrraper-list__item-link::after{
+    display: block;
+    border-bottom: 3px solid #30C88F;
+    content: '';
+    
+} */
+
+.site-wrraper-list__item-link:hover  {
+    margin-top: 28px;
+    color: #30C88F;
+}
+
 .site-wrraper-link {
     padding: 8px 36px 8px 33px;
     display: inline-block;
@@ -98,6 +124,9 @@ img {
     background-image: var(--link-color);
     color: #fff;
     text-decoration: none;
+}
+.site-wrraper-link:hover{
+    opacity: 0.4;
 }
 .site-main{
     padding-top: 50px;
@@ -260,8 +289,7 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-.site-footer-wrraper__content {
-}
+
 
 
 .site-footer-wrraper__logo-link {
@@ -320,8 +348,10 @@ img {
 }
 
 .site-wrraper-link--footer{
+    margin-left: auto;
+    width: 163px;
+    display: block;
     margin-top: 49px;
-    margin-left: 55px;
 }
 .site-footer-wrraper-last-content__page {
     margin-right: auto;
@@ -336,6 +366,7 @@ img {
     color: #fff;
 
 }
+
 @media only screen and (max-width:450px){
     
     .site-header{
@@ -346,8 +377,8 @@ img {
         padding-bottom: 0;
     }
     .site-header-wrraper{
-        flex-direction: column;
-        align-items: flex-start;
+        
+        justify-content: space-between;
         padding-bottom: 30px;
         
     }
@@ -355,11 +386,40 @@ img {
        display: none;
     }
     .site-wrraper-list{
-        display: none;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+       
     }
-   .site-main{
-     
-   }
+    .site-wrraper-list--open{  
+       
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 271px;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: -0.138462px;
+        transition: opacity 0.7s ease, 
+                    transform 0.7s ease;
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    
+    .site-wrraper-list__item--open{
+        color: var(--head-color);
+    }
+
+    .site-wrraper-list__item--open:not(:last-child){
+        margin-bottom: 24px;
+        
+    }
+    .header-button{
+        opacity: 1;
+    }
+   
 
     .site-section{
     position: relative;
@@ -370,15 +430,22 @@ img {
     background-position:  calc(50% + 4px) ,  calc(50% + 51px) ;
 
     }
+    
+    .site-section--open {
+        transition: opacity 0.7s ease;
+        opacity: 0.5;
+
+    }
     .site-section__wrraper{
-        padding-left: 59px;
         position: absolute;
         z-index: 1;
-        top: 100%;
-        
+        top: 100%; 
     }
 
     .site-section__wrraper-head{
+        margin: 0 auto;
+        margin-top: 42px;
+        margin-bottom: 16px;
         max-width: 327px;
         font-weight: 100;
         font-size: 40px;
@@ -387,6 +454,8 @@ img {
         letter-spacing: -0.714286px;
     }
     .site-section__wrraper-page{
+        margin: 0 auto;
+        margin-bottom: 32px;
         max-width: 327px;
         font-size: 15px;
         line-height: 25px;
@@ -394,14 +463,17 @@ img {
         letter-spacing: -0.234375px;
     }
     .site-wrraper-link--main{
-        margin-left: 81px;
+        display: block;
+        width: 163px;    
+        margin: 0 auto;
 
     }
     .why-choose-easybank{
         margin-top: 100%;
-        padding-left: 59px;
     }
     .why-choose-easybank__head{
+        margin: 0 auto;
+        margin-bottom: 14px;
         max-width: 327px;
         font-weight: 100;
         font-size: 32px;
@@ -410,6 +482,8 @@ img {
         letter-spacing: -0.571429px;
     }
     .why-choose-easybank__page{
+        margin: 0 auto;
+        margin-bottom: 56px;
         width: 327px;
         font-size: 15px;
         line-height: 25px;
@@ -417,7 +491,9 @@ img {
         letter-spacing: -0.234375px;
     }
     .main-easybank-list{
+        margin: 0 auto;
         flex-direction: column;
+        
     }
     .main-easybank-list__item{
         text-align: center;
@@ -440,7 +516,7 @@ img {
         letter-spacing: -0.234375px;
     }
     .latest-articles{
-        padding-left: 59px;
+        margin: 0 auto;
     }
 
     .latest-articles__head{

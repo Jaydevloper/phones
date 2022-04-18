@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>21-vazifa</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.mini.css">
 </head>
 <body>
     <header class="site-header">
@@ -14,33 +16,39 @@
             <img class="site-header-wrraper__logo-link-img" src="img/logo-header.svg" alt="logo" width="139" height="20">
 
             </a>
-            <ul class="site-wrraper-list">
-                <li class="site-wrraper-list__item">
+            <ul class="site-wrraper-list ">
+                <li class="site-wrraper-list__item site-wrraper-list__item--open">
                     <a class="site-wrraper-list__item-link" href="#">
                         Home
                     </a>
                 </li>
-                <li class="site-wrraper-list__item">
+                <li class="site-wrraper-list__item site-wrraper-list__item--open">
                     <a class="site-wrraper-list__item-link" href="#">
                         About
                     </a>
                 </li>
-                <li class="site-wrraper-list__item">
+                <li class="site-wrraper-list__item site-wrraper-list__item--open">
                     <a class="site-wrraper-list__item-link" href="#">
                         Contact
                     </a>
                 </li>
-                <li class="site-wrraper-list__item">
+                <li class="site-wrraper-list__item site-wrraper-list__item--open">
                     <a class="site-wrraper-list__item-link" href="#">
                         Blog
                     </a>
                 </li>
-                <li class="site-wrraper-list__item">
+                <li class="site-wrraper-list__item site-wrraper-list__item--open">
                     <a class="site-wrraper-list__item-link" href="#">
                         Careers
                     </a>
                 </li>
             </ul>
+            <label for="btn">
+                <img class="header-button" src="img/toggler-open.svg" alt="icon" width="24" height="11">
+            </label>
+            <button class="header-button js-btn visually-hidden" type="button" id="btn">
+
+            </button>
 
             <a class="site-wrraper-link site-wrraper-link--mobile" href="#" >
                 Request Invite
@@ -50,7 +58,7 @@
 
     <main class="site-main">
 
-        <section class="site-section ">
+        <section class="site-section  ">
             <div class="site-section__wrraper container">
                 <h1 class="site-section__wrraper-head">
                     Next generation
@@ -293,6 +301,7 @@
 
 
     </footer>
+    <script src="js/main.js"></script>
     
 
 
