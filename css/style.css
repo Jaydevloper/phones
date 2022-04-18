@@ -102,6 +102,7 @@ img {
 .site-main{
     padding-top: 50px;
 }
+
 .site-section {
     display: flex;
     align-items: center;
@@ -336,10 +337,9 @@ img {
 
 }
 @media only screen and (max-width:450px){
-    body{
-    }
+    
     .site-header{
-        width: 450px;
+       max-width: 450px;
         position: fixed;
         z-index: 10;
         display: flex;
@@ -357,26 +357,29 @@ img {
     .site-wrraper-list{
         display: none;
     }
-   
+   .site-main{
+     
+   }
 
     .site-section{
     position: relative;
-    z-index: 1;   
+    z-index: 1;
     min-height: 327px;
     background-image: url(../img/hero-phones-mobile.svg) ,url(../img/bg-mobile.svg);
     background-size: 400px ,547px;
-    background-position: calc(50% + 4px) , calc(50% + 51px);
+    background-position:  calc(50% + 4px) ,  calc(50% + 51px) ;
 
     }
     .site-section__wrraper{
-        top: 100%;
+        padding-left: 59px;
         position: absolute;
         z-index: 1;
-        left: 59px;
+        top: 100%;
+        
     }
 
     .site-section__wrraper-head{
-        width: 327px;
+        max-width: 327px;
         font-weight: 100;
         font-size: 40px;
         line-height: 47px;
@@ -384,7 +387,7 @@ img {
         letter-spacing: -0.714286px;
     }
     .site-section__wrraper-page{
-        width: 327px;
+        max-width: 327px;
         font-size: 15px;
         line-height: 25px;
         text-align: center;
@@ -399,7 +402,7 @@ img {
         padding-left: 59px;
     }
     .why-choose-easybank__head{
-        width: 327px;
+        max-width: 327px;
         font-weight: 100;
         font-size: 32px;
         line-height: 38px;
