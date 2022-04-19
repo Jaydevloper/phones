@@ -378,8 +378,9 @@ img {
     }
     .site-header-wrraper{
         
-        justify-content: space-between;
+        padding-top: 24px;
         padding-bottom: 30px;
+        justify-content: space-between;
         
     }
     .site-wrraper-link--mobile{
@@ -392,19 +393,21 @@ img {
        
     }
     .site-wrraper-list--open{  
-       
+       padding: 32px 132px 32px 130px;
         display: flex;
         flex-direction: column;
         position: absolute;
         z-index: 1;
         top: 100%;
-        left: 271px;
+        left: 403px;
         font-size: 18px;
         line-height: 21px;
         letter-spacing: -0.138462px;
         transition: opacity 0.7s ease, 
                     transform 0.7s ease;
         transform: translateX(-100%);
+        background-color: #fff;
+        border-radius: 4px;
         opacity: 1;
     }
     
